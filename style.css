@@ -17,7 +17,6 @@ body {
 }
 
 .grid {
-    background-color: red;
     width: 50%;
     height: 70vh;
     padding: 20px;
@@ -27,20 +26,42 @@ body {
 }
 
 .gridbox {
-    background-color: white;
     height: 40vw;
     width: 40vw;
+    margin-top: 10vh;
+}
+
+.grid-row {
+    display: flex;
+    justify-content: left;
 }
 
 .grid-unit {
-    background-color: rgb(202, 202, 202);
+    background-color: #ffffff;
+    width: 67px;
+    height: 67px;
+}
+.grid-unit:hover {
+    background-color: black;
 }
 
 .options {
-    background-color: blue;
     width: 50%;
     font-size: 1.5rem;
     padding: 20px;
+}
+
+.option-div {
+    margin-bottom: 30px;
+}
+
+label {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
 }
 
 .clear-btn {
