@@ -1,0 +1,51 @@
+* {
+    font-family: "Anonymous Pro", monospace;
+    color: #F6F6F6;
+}
+
+body {
+    background-color: #262626;
+}
+
+.heading {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.main-container {
+    display: flex;
+}
+
+.grid {
+    background-color: red;
+    width: 50%;
+    height: 70vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridbox {
+    background-color: white;
+    height: 40vw;
+    width: 40vw;
+}
+
+.grid-unit {
+    background-color: rgb(202, 202, 202);
+}
+
+.options {
+    background-color: blue;
+    width: 50%;
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+.clear-btn {
+    background-color: #414141;
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-size: 1.2rem;
+}
