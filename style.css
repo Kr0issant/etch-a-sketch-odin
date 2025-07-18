@@ -26,20 +26,30 @@ body {
 }
 
 .gridbox {
-    height: 40vw;
-    width: 40vw;
-    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 35vmax;
+    max-height: 35vmax;
+    border: 1px solid #000;
+    overflow: hidden;         /* Prevent units from spilling out */
+    margin: auto;
 }
 
 .grid-row {
     display: flex;
-    justify-content: left;
+    flex: 1;
+    min-height: 0;
 }
 
 .grid-unit {
+    flex: 1;
+    border: 1px solid #d5d5d5;
     background-color: #ffffff;
     width: 67px;
     height: 67px;
+    aspect-ratio: 1/1;
+    min-width: 0;
+    box-sizing: border-box;
 }
 .grid-unit:hover {
     background-color: black;
@@ -69,4 +79,5 @@ input[type="checkbox"] {
     border-radius: 10px;
     padding: 8px 16px;
     font-size: 1.2rem;
+    margin-top: 150px;
 }
