@@ -33,6 +33,10 @@ body {
     border: 1px solid #000;
     overflow: hidden;         /* Prevent units from spilling out */
     margin: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 .grid-row {

@@ -31,30 +31,27 @@ function redraw_grid() {
     gridbox.innerHTML = row_unit.repeat(size);
 }
 
+function drawing_logic(e) {
+    if (erase_toggle.checked) {
+        e.target.style.backgroundColor = "#ffffff"
+    } else if (randomize_toggle.checked) {
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16); 
+        e.target.style.backgroundColor = `#${randomColor.padStart(6, '0')}`;
+    } else {
+        e.target.style.backgroundColor = color_selector.value;
+    }
+}
+
 gridbox.addEventListener("pointerover", (e) => {
     if (e.target.classList.contains('grid-unit')) {
         if (pointerDown) {
-            if (erase_toggle.checked) {
-                e.target.style.backgroundColor = "#ffffff"
-            } else if (randomize_toggle.checked) {
-                const randomColor = Math.floor(Math.random() * 16777215).toString(16); 
-                e.target.style.backgroundColor = `#${randomColor.padStart(6, '0')}`;
-            } else {
-                e.target.style.backgroundColor = color_selector.value;
-            }
+            drawing_logic(e)
         }
     }
 }, true);
 gridbox.addEventListener("pointerdown", (e) => {
     if (e.target.classList.contains('grid-unit')) {
-        if (erase_toggle.checked) {
-            e.target.style.backgroundColor = "#ffffff"
-        } else if (randomize_toggle.checked) {
-            const randomColor = Math.floor(Math.random() * 16777215).toString(16); 
-            e.target.style.backgroundColor = `#${randomColor.padStart(6, '0')}`;
-        } else {
-            e.target.style.backgroundColor = color_selector.value;
-        }
+        drawing_logic(e)
     }
 }, true);
 
